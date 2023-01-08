@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class ContentsApplication
 
 fun main(args: Array<String>) {
-	runApplication<ContentsApplication>(*args)
+    runApplication<ContentsApplication>(*args)
 }
