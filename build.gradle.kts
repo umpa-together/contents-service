@@ -14,6 +14,13 @@ group = "com.umpa"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
+dependencyManagement {
+    val springCloudVersion = "2021.0.5"
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
+    }
+}
+
 repositories {
     mavenCentral()
 }
