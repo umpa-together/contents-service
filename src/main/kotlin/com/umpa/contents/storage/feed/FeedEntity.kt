@@ -1,7 +1,7 @@
 package com.umpa.contents.storage.feed
 
-import com.umpa.contents.common.enums.FeedType
 import com.umpa.contents.storage.BaseEntity
+import com.umpa.contents.support.enums.FeedType
 import javax.persistence.Column
 import javax.persistence.Entity
 import javax.persistence.EnumType

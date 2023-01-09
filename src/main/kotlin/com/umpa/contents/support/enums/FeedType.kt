@@ -1,4 +1,4 @@
-package com.umpa.contents.common.enums
+package com.umpa.contents.support.enums
 
 enum class FeedType {
     Playlist, Daily

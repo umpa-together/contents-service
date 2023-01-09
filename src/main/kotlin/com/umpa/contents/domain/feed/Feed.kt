@@ -1,7 +1,7 @@
 package com.umpa.contents.domain.feed
 
-import com.umpa.contents.common.enums.FeedType
 import com.umpa.contents.storage.feed.FeedEntity
+import com.umpa.contents.support.enums.FeedType
 
 data class Feed(
     val playlistId: Long?,
