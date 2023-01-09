@@ -19,6 +19,6 @@ class PlaylistController(
     fun createPlaylist(
         @RequestBody body: PlaylistCreateRequest
     ) {
-        playlistService.createPlaylist(body.userId, body.title, body.content, listOf(), body.hashtags)
+        playlistService.createPlaylist(body.userId, body.title, body.content, body.songs, body.hashtags)
     }
 }
