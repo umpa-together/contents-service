@@ -14,10 +14,10 @@ data class Playlist(
     val image: String,
     val accessedAt: LocalDateTime,
     val youtubeUrl: String,
-//    val songs: List<Any>,
+    val songs: List<Any>,
     val active: Boolean
 ) {
-    constructor(entity: PlaylistEntity) : this(
+    constructor(entity: PlaylistEntity, songs: List<Any>) : this(
         id = entity.id,
         createdAt = entity.createdAt,
         updatedAt = entity.updatedAt,
@@ -28,7 +28,7 @@ data class Playlist(
         image = entity.image,
         accessedAt = entity.accessedAt,
         youtubeUrl = entity.youtubeUrl,
-//        songs = entity.songs,
+        songs = songs,
         active = entity.active
     )
 }

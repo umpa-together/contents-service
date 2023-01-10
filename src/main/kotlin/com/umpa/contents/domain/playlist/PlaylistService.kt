@@ -13,8 +13,8 @@ class PlaylistService(
     private val hashtagWriter: HashtagWriter,
     private val songClient: SongClient
 ) {
-    fun createPlaylist(userId: Long, title: String, content: String, songs: List<Any>, hashtags: List<String>) {
-        val playlist = Playlist(playlistWriter.createPlaylist(userId, title, content, songs))
+    fun createPlaylist(userId: Long, title: String, content: String, songs: List<Any>, hashtags: List<String>): Playlist {
+        val playlist = playlistWriter.createPlaylist(userId, title, content, songs)
         // TODO s3에 image 업로드
         songClient.createSongs(
             playlistId = playlist.id,
@@ -25,5 +25,6 @@ class PlaylistService(
         hashtags.forEach {
             hashtagWriter.createHashtag(it, playlistId = playlist.id)
         }
+        return Playlist(playlist, songs)
     }
 }
