@@ -19,7 +19,7 @@ class SongClient(
         dailyId: Long? = null,
         songs: List<Any>,
         type: SongType
-    ): List<String> {
+    ): Boolean {
         val body = SongCreateRequest(
             playlistId = playlistId,
             dailyId = dailyId,

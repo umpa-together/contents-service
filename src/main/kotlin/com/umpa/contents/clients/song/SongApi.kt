@@ -12,10 +12,10 @@ import org.springframework.web.bind.annotation.RequestBody
 )
 interface SongApi {
     @PostMapping(
-        value = ["/api/v1/song"],
+        value = ["/api/v1/songs"],
         consumes = [MediaType.APPLICATION_JSON_VALUE]
     )
     fun createSongs(
         @RequestBody body: SongCreateRequest
-    ): ResponseEntity<List<String>>
+    ): ResponseEntity<Boolean>
 }
