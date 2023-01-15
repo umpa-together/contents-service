@@ -14,6 +14,13 @@ group = "com.umpa"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
+dependencyManagement {
+    val springCloudVersion = "2021.0.5"
+    imports {
+        mavenBom("org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion")
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -31,8 +38,8 @@ dependencies {
     runtimeOnly("com.h2database:h2")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("com.ninja-squad:springmockk:3.1.2")
     testImplementation("io.mockk:mockk:1.13.2")
+
     testImplementation("io.kotest:kotest-runner-junit5:5.4.2")
     testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.2")
 }

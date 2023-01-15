@@ -4,6 +4,6 @@ data class PlaylistCreateRequest(
     val userId: Long,
     val title: String,
     val content: String,
-//    val songs: List<Any>,
+    val songs: List<Any>,
     val hashtags: List<String>
 )

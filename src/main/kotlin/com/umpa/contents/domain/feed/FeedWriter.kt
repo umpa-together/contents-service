@@ -1,8 +1,8 @@
 package com.umpa.contents.domain.feed
 
-import com.umpa.contents.common.enums.FeedType
 import com.umpa.contents.storage.feed.FeedEntity
 import com.umpa.contents.storage.feed.FeedRepository
+import com.umpa.contents.support.enums.FeedType
 import org.springframework.stereotype.Component
 import javax.transaction.Transactional
 
